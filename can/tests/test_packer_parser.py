@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-
 import unittest
 
+import cereal.messaging as messaging
 from opendbc.can.parser import CANParser
 from opendbc.can.packer import CANPacker
-import cereal.messaging as messaging
-
 
 # Python implementation so we don't have to depend on boardd
 def can_list_to_can_capnp(can_msgs, msgtype='can'):
@@ -35,7 +33,7 @@ class TestCanParserPacker(unittest.TestCase):
       ("STEER_TORQUE", "STEERING_CONTROL", 0),
       ("STEER_TORQUE_REQUEST", "STEERING_CONTROL", 0),
     ]
-    checks = []
+    checks = [("STEERING_CONTROL", 50)]
 
     parser = CANParser(dbc_file, signals, checks, 0)
     packer = CANPacker(dbc_file)
@@ -63,17 +61,15 @@ class TestCanParserPacker(unittest.TestCase):
   def test_subaru(self):
     # Subuaru is little endian
 
-    dbc_file = "subaru_global_2017"
+    dbc_file = "subaru_global_2017_generated"
 
     signals = [
       ("Counter", "ES_LKAS", 0),
       ("LKAS_Output", "ES_LKAS", 0),
       ("LKAS_Request", "ES_LKAS", 0),
       ("SET_1", "ES_LKAS", 0),
-
     ]
-
-    checks = []
+    checks = [("ES_LKAS", 50)]
 
     parser = CANParser(dbc_file, signals, checks, 0)
     packer = CANPacker(dbc_file)
