@@ -247,34 +247,22 @@ CM_ SG_ 880 Steering_Voltage_Flat "receives later than 371";
 VAL_ 328 Gear 0 "N" 1 "D" 2 "D" 3 "D" 4 "D" 5 "D" 6 "D" 14 "R" 15 "P";
 VAL_ 1745 Units 0 "Metric" 1 "Imperial";
 
-CM_ "subaru_outback_2015.dbc starts here";
+CM_ "subaru_wrx_2018.dbc starts here";
 
 
-BO_ 358 ES_DashStatus: 8 XXX
- SG_ Not_Ready_Startup : 0|3@1+ (1,0) [0|7] "" XXX
- SG_ Seatbelt_Disengage : 12|2@1+ (1,0) [0|3] "" XXX
- SG_ Disengage_Alert : 14|2@1+ (1,0) [0|3] "" XXX
+BO_ 355 ES_DashStatus: 8 XXX
+ SG_ Not_Ready_Startup : 4|2@1+ (1,0) [0|3] "" XXX
  SG_ Cruise_On : 16|1@1+ (1,0) [0|1] "" XXX
- SG_ Cruise_Activated : 17|1@1+ (1,0) [0|1] "" XXX
- SG_ Signal1 : 18|1@1+ (1,0) [0|1] "" XXX
- SG_ WHEELS_MOVING_2015 : 19|1@1+ (1,0) [0|1] "" XXX
- SG_ Driver_Input : 20|1@1+ (1,0) [0|1] "" XXX
- SG_ Cruise_Distance : 21|3@1+ (1,0) [0|7] "" XXX
+ SG_ Cruise_Activated : 17|1@0+ (1,0) [0|1] "" XXX
  SG_ Cruise_Set_Speed : 24|8@1+ (1,0) [0|255] "" XXX
- SG_ Cruise_Fault : 32|1@1+ (1,0) [0|1] "" XXX
- SG_ Cruise_On_2 : 34|1@1+ (1,0) [0|1] "" XXX
- SG_ Counter : 37|3@1+ (1,0) [0|7] "" XXX
- SG_ Steep_Hill_Disengage : 44|1@1+ (1,0) [0|3] "" XXX
- SG_ Car_Follow : 46|1@1+ (1,0) [0|1] "" XXX
- SG_ Far_Distance : 48|4@1+ (5,0) [0|15] "m" XXX
+ SG_ Counter : 40|3@1+ (1,0) [0|7] "" XXX
+ SG_ Brake : 43|1@1+ (1,0) [0|1] "" XXX
+ SG_ Car_Follow : 54|1@1+ (1,0) [0|1] "" XXX
+ SG_ Far_Distance : 56|4@1+ (1,0) [0|1] "" XXX
 
 BO_ 881 Steering_Torque: 8 XXX
- SG_ Steering_Motor_Flat : 0|10@1+ (32,0) [0|1000] "" XXX
- SG_ Steer_Torque_Output : 16|11@1- (-32,0) [-1000|1000] "" XXX
+ SG_ Steering_Motor_Flat : 0|10@1+ (1,0) [0|1000] "" XXX
+ SG_ Steer_Torque_Output : 16|11@1- (-1,0) [-1000|1000] "" XXX
  SG_ Steer_Error_1 : 27|1@1+ (1,0) [0|1] "" XXX
- SG_ Steer_Torque_Sensor : 29|11@1- (1,0) [-1000|1000] "" XXX
- SG_ Steering_Angle : 40|16@1- (-0.033,0) [-600|600] "" XXX
-
-CM_ SG_ 358 Disengage_Alert "seatbelt and steep hill disengage";
-CM_ SG_ 358 Cruise_Fault "No engagement until restart";
-CM_ SG_ 358 Car_Follow "lead car detected";
+ SG_ Steer_Torque_Sensor : 29|11@1- (-1,0) [-1000|1000] "" XXX
+ SG_ Steering_Angle : 40|16@1- (-0.026,-23.14) [-600|600] "" XXX
