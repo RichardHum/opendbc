@@ -226,8 +226,6 @@ BO_ 358 ES_DashStatus: 8 XXX
  SG_ Cruise_On : 16|1@1+ (1,0) [0|1] "" XXX
  SG_ Cruise_Activated : 17|1@1+ (1,0) [0|1] "" XXX
  SG_ Signal1 : 18|1@1+ (1,0) [0|1] "" XXX
- SG_ WHEELS_MOVING_2015 : 19|1@1+ (1,0) [0|1] "" XXX
- SG_ Driver_Input : 20|1@1+ (1,0) [0|1] "" XXX
  SG_ Cruise_Distance : 21|3@1+ (1,0) [0|7] "" XXX
  SG_ Cruise_Set_Speed : 24|8@1+ (1,0) [0|255] "" XXX
  SG_ Cruise_Fault : 32|1@1+ (1,0) [0|1] "" XXX
@@ -236,6 +234,9 @@ BO_ 358 ES_DashStatus: 8 XXX
  SG_ Steep_Hill_Disengage : 44|1@1+ (1,0) [0|3] "" XXX
  SG_ Car_Follow : 46|1@1+ (1,0) [0|1] "" XXX
  SG_ Far_Distance : 48|4@1+ (5,0) [0|15] "m" XXX
+ SG_ NEW_SIGNAL_1 : 35|1@0+ (1,0) [0|1] "" XXX
+ SG_ ACC_READY : 19|1@1+ (1,0) [0|1] "" XXX
+ SG_ ACC_HOLD : 20|1@1+ (1,0) [0|1] "" XXX
 
 BO_ 881 Steering_Torque: 8 XXX
  SG_ Steering_Motor_Flat : 0|10@1+ (32,0) [0|1000] "" XXX
