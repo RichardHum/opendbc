@@ -39,6 +39,7 @@ env = Environment(
     "-O2",
     "-Wunused",
     "-Werror",
+    "-Wunused-but-set-variable",
     "-Wshadow",
   ] + ccflags_asan,
   LDFLAGS=ldflags_asan,
