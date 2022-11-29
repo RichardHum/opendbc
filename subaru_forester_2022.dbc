@@ -291,11 +291,14 @@ BO_ 576 CruiseControl: 8 XXX
  SG_ Signal2 : 42|22@1+ (1,0) [0|4194303] "" XXX
 
 BO_ 292 ES_LKAS_2: 8 XXX
- SG_ NEW_SIGNAL_3 : 12|1@0+ (1,0) [0|1] "" XXX
  SG_ CHECKSUM : 0|8@1+ (1,0) [0|1] "" XXX
  SG_ COUNTER : 8|4@1+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_1 : 56|1@1+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_4 : 40|16@1- (1,0) [0|1] "" XXX
+ SG_ LKAS_Output : 40|17@1- (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_3 : 12|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 282 NEW_MSG_1: 8 XXX
+ SG_ STEER_ANGLE : 24|17@1- (1,0) [0|1] "" XXX
+ SG_ STEER_SENSOR_OUTPUT : 47|17@1- (1,0) [0|1] "" XXX
 
 
 
