@@ -214,7 +214,6 @@ BO_ 802 ES_LKAS_State: 8 XXX
  SG_ LKAS_Alert_Msg : 12|3@1+ (1,0) [0|7] "" XXX
  SG_ Signal1 : 15|2@1+ (1,0) [0|3] "" XXX
  SG_ LKAS_ACTIVE : 17|1@1+ (1,0) [0|1] "" XXX
- SG_ LKAS_Dash_State : 18|2@1+ (1,0) [0|2] "" XXX
  SG_ Signal2 : 20|3@1+ (1,0) [0|7] "" XXX
  SG_ Backward_Speed_Limit_Menu : 23|1@1+ (1,0) [0|1] "" XXX
  SG_ LKAS_Left_Line_Enable : 24|1@1+ (1,0) [0|1] "" XXX
@@ -224,7 +223,8 @@ BO_ 802 ES_LKAS_State: 8 XXX
  SG_ LKAS_Left_Line_Visible : 28|2@1+ (1,0) [0|3] "" XXX
  SG_ LKAS_Right_Line_Visible : 30|2@1+ (1,0) [0|3] "" XXX
  SG_ LKAS_Alert : 32|5@1+ (1,0) [0|31] "" XXX
- SG_ Signal3 : 37|27@1+ (1,0) [0|1] "" XXX
+ SG_ LCAS_ACTIVE : 50|1@1+ (1,0) [0|1] "" XXX
+ SG_ LKAS_Dash_State : 18|2@1+ (1,0) [0|2] "" XXX
 
 BO_ 722 AC_State: 8 XXX
  SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] "" XXX
@@ -295,7 +295,7 @@ BO_ 292 ES_LKAS_2: 8 XXX
  SG_ CHECKSUM : 0|8@1+ (1,0) [0|1] "" XXX
  SG_ COUNTER : 8|4@1+ (1,0) [0|1] "" XXX
  SG_ NEW_SIGNAL_1 : 56|1@1+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_4 : 47|14@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_4 : 40|16@1- (1,0) [0|1] "" XXX
 
 
 
@@ -315,10 +315,10 @@ CM_ SG_ 801 Far_Distance "1=0-5m, 2=5-10m, 3=10-15m, 4=15-20m, 5=20-25m, 6=25-30
 CM_ SG_ 801 Cruise_State "0 = Normal, 1 = Hold+User Brake, 2 = Ready, 3 = Hold";
 CM_ SG_ 802 LKAS_Alert_Msg "1 = Keep_Hands_On_Wheel, 6 = Pre_Collision_Braking, 7 = Keep_Hands_On_Wheel_Off";
 CM_ SG_ 802 LKAS_ACTIVE "Turns on the full LKAS dash display";
-CM_ SG_ 802 LKAS_Dash_State "0 = Off, 1 = Ready, 2 = Active";
 CM_ SG_ 802 LKAS_Left_Line_Visible "0 = Off, 1 = White, 2 = Green, 3 = Orange";
 CM_ SG_ 802 LKAS_Right_Line_Visible "0 = Off, 1 = White, 2 = Green, 3 = Orange";
 CM_ SG_ 802 LKAS_Alert "1 = FCW_Cont_Beep, 2 = FCW_Repeated_Beep, 3 = Throttle_Management_Activated_Warning, 4 = Throttle_Management_Activated_Alert, 5 = Pre_Collision_Activated_Alert, 8 = Traffic_Light_Ahead, 9 = Apply_Brake_to_Hold Position, 11 = LDW_Right, 12 = LDW_Left, 13 = Stay_Alert, 14 = Lead_Vehicle_Start_Alert, 18 = Keep_Hands_On_Steering_Alert, 24 = Audio_Beep, 25 = Audio_Lead_Car_Change, 26 = Audio_ACC_Disengaged, 27 = Audio_LKAS_disabled, 28 = Audio_Ding_Ding, 30 = Audio_Repeated_Beep";
+CM_ SG_ 802 LKAS_Dash_State "0 = Off, 1 = Ready, 2 = Active";
 CM_ SG_ 545 Cruise_Throttle "RPM-like output signal";
 CM_ SG_ 545 Cruise_Soft_Disable "Eyesight Temporary disable, sets CruiseControl Activated = 0";
 CM_ SG_ 545 Distance_Swap "Switch from Close to Far distance";
